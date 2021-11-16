@@ -1,3 +1,37 @@
+# Seive of erotosthenes
+
+```cpp
+
+void seive(int n) //n is number upto which primes are calculated
+{
+	vector<bool> p(n + 1, true);
+	p[1] = false;
+	p[0] = false;
+
+	//seive algorithm
+	for (int i = 2; i <= sqrt(n); ++i) //(or) for (int i = 2; i*i <n; ++i) (or) for(int i = 2; i <=n/2; ++i)
+	{
+		if (p[i] == true)
+		{
+			for (int j = i * i; j <= n; j += i) //(or)for (int j = 2 * i; j < = n; j += i)
+			{
+				p[j] = false;
+			}
+		}
+
+	}
+	//Uncomment to print the primes
+	/*
+	for (int j = 0; j <= n; ++j)
+	{
+		if (p[j] == true)
+			cout << j << " ";
+	}
+	*/
+}
+```
+
+
 ## Optimization 1
 * If n is a composite number then there exist atleast two factors of n such that one number is less than or equal to sqrt(n) a and another is greater than or equal to sqrt(n)
  i.e x<=sqrt(n) and y>=sqrt(n)
