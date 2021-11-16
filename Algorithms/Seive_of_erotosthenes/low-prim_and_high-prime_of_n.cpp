@@ -1,3 +1,9 @@
+/*
+Any number can be expressed as the product of primes,for example 24 can be expressed as 2^3 * 3^1.
+If we able to find low and high primes of n (2 and 3 for 24) then Prime factorization of a number can be caluculated in O(log n) of time.
+Below program finds the low and high prime of n.
+*/
+
 #include<bits/stdc++.h>
 using namespace std;
 
