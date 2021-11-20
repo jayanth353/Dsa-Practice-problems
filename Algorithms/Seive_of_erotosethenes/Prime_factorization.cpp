@@ -23,6 +23,6 @@ int main()
 {
 	int n;
 	cin >> n;// n is a number for which prime factorisation is calculated
-	prime_factorization(237584); //
+	prime_factorization(n); //
 
 }
